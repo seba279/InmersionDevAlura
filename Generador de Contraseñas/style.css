@@ -1,0 +1,328 @@
+ /*agregado v4*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+:root {
+  --primary: #252525;
+  --secondary: #fce700;
+  --white: #fff;
+  --celeste: rgb(0, 191, 255)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*agregado v4*/
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+.tituloContraseña{
+    font-size: 2.2rem;
+}
+
+.tituloCantidad {
+    color: #888;
+    font-size: 1.2rem;
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+.tituloCaracteres {
+    font-size: 1.2rem !important;
+}
+
+.formulrario {
+    border: 2px solid rgba(169, 169, 169, 0.365);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 3rem;
+}
+
+.contraseña {
+    text-align: center;
+    color: var(--celeste);
+    resize: none;
+    word-wrap: break-word; 
+    padding-top: 1rem;
+    display: none;
+    width: 75%;
+    position: relative;
+    left: 4.8rem;
+}
+
+
+.botonGenerarContraseña, 
+.botonLimpiar {
+    color: white !important;
+    width: 75%;
+    position: relative;
+    left: 4.8rem;
+}
+
+
+.mensaje {
+    height: 4rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    position: relative;
+    left: 4.8rem;
+}
+
+.container {
+    width: 100%;
+}
+
+.range1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+.min .max {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    
+}
+
+.min  h5 strong,
+.min span strong,
+.max h5 strong,
+.max span strong {
+    color: var(--celeste);
+}
+
+.range-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 2.5rem;
+}
+
+.selector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    z-index: 1;
+}
+
+.select-value {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--celeste);
+    margin-bottom: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.select-value::after {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+    background-color: var(--celeste);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: -1;
+}
+
+.select-btn {
+    width: 3rem;
+    height: 1rem;
+    border-radius: 50px;
+    background-color: var(--celeste);
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--celeste); 
+}
+
+#slider-input {
+    -webkit-appearance: none;
+    height: 5px;
+    background-color: darkgray;
+    border-radius: 5px;
+}
+
+#slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 3rem;
+    height: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container1 h2 {
+    font-size: 1.4rem;
+    color:#888;
+    text-align:center;
+  }
+  .container1 .list {
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    max-width:650px;
+  }
+  .form-element {
+    position:relative;
+    width:100px;
+    height:100px;
+  }
+  .form-element input {
+    display:none;
+  }
+  .form-element label {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:100%;
+    cursor:pointer;
+    border:2px solid #ddd;
+    background:#fff;
+    box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:all 200ms ease-in-out;
+    border-radius:5px;
+  }
+  .form-element .icon {
+    margin-top:10px;
+    font-size:30px;
+    color:var(--celeste) !important;
+    transition:all 200ms ease-in-out;
+  }
+  .form-element .title {
+    font-size: 0.8rem;
+    color: darkgray;
+    padding-bottom: 1rem;
+    transition:all 200ms ease-in-out;
+  }
+  .form-element label:before {
+    content:"✓";
+    position:absolute;
+    width:18px;
+    height:18px;
+    top:8px;
+    left:8px;
+    background-color: var(--celeste);
+    color:#fff;
+    text-align:center;
+    line-height:18px;
+    font-size:14px;
+    font-weight:600;
+    border-radius:50%;
+    opacity:0;
+    transform:scale(0.5);
+    transition:all 200ms ease-in-out;
+  }
+  .form-element input:checked + label:before {
+    opacity:1;
+    transform:scale(1);
+  }
+  .form-element input:checked + label .icon {
+    color: var(--celeste) !important;
+  }
+  
+  .form-element input:checked + label {
+    border:2px solid var(--celeste) !important;
+  }
+
+  @media (min-width: 360px) and (max-width: 767px) {
+
+    .formulrario {
+        width: 20rem !important;
+    }
+
+    .tituloContraseña {
+        font-size: 1.4rem !important;
+    }
+
+    .container {
+        position: relative;
+        left: -3rem;
+        top: 0rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .min,
+    .max {
+        display: none;
+    }
+
+    .botonGenerarContraseña,
+    .botonLimpiar,
+    .mensaje,
+    .contraseña {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+
+    .mensaje {
+        height: auto;
+    }
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .tituloContraseña {
+        font-size: 2rem;
+    }
+    .container {
+        position: relative;
+        left: -3rem;
+        width: 100%;
+    }
+    .tituloCaracteres {
+        font-size: 1.2rem !important;
+    }
+
+    .botonGenerarContraseña, 
+    .botonLimpiar,
+    .mensaje, 
+    .contraseña {
+        position: relative;
+        left: 0rem;
+        width: 100%;
+    }
+  }
