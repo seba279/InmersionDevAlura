@@ -61,6 +61,11 @@ const clickAgregar = () => {
         listaNombreGastos.push(nombreGasto);
         listaValoresGastos.push(valorGasto);
         actualizarListaGastos();  
+    }else {
+         //Agregando los elementos
+         listaNombreGastos.push(nombreGasto);
+         listaValoresGastos.push(valorGasto);
+         actualizarListaGastos();  
     }
 }
 
