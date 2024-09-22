@@ -46,7 +46,7 @@ const mensajeError = (texto, id) => {
         }, 2000);
 }
 
-const agregar = () => {
+const agregar = (nombreGasto, valorGasto) => {
     listaNombreGastos.push(nombreGasto);
     listaValoresGastos.push(valorGasto);
     actualizarListaGastos(); 
@@ -64,10 +64,10 @@ const clickAgregar = () => {
     }else  if(parseInt(valorGasto) >= 150){
         mensajeError("Fijate estas pasandote del limite para gastar.", "valorGasto");
         //Agregando los elementos
-        agregar();  
+        agregar(nombreGasto, valorGasto);
     }else {
          //Agregando los elementos
-         agregar();
+         agregar(nombreGasto, valorGasto);
     }
 }
 
