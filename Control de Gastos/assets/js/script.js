@@ -46,6 +46,12 @@ const mensajeError = (texto, id) => {
         }, 2000);
 }
 
+const agregar = () => {
+    listaNombreGastos.push(nombreGasto);
+    listaValoresGastos.push(valorGasto);
+    actualizarListaGastos(); 
+}
+
 //Esta funcion se invoca cuando el usuario hace click en el boton de Agregar
 const clickAgregar = () => {
     let nombreGasto = document.getElementById('nombreGasto').value;
@@ -58,14 +64,10 @@ const clickAgregar = () => {
     }else  if(parseInt(valorGasto) >= 150){
         mensajeError("Fijate estas pasandote del limite para gastar.", "valorGasto");
         //Agregando los elementos
-        listaNombreGastos.push(nombreGasto);
-        listaValoresGastos.push(valorGasto);
-        actualizarListaGastos();  
+        agregar();  
     }else {
          //Agregando los elementos
-         listaNombreGastos.push(nombreGasto);
-         listaValoresGastos.push(valorGasto);
-         actualizarListaGastos();  
+         agregar();
     }
 }
 
