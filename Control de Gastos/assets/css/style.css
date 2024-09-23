@@ -31,8 +31,8 @@ input[type="number"] {
 button {
     padding: 0.5rem 1rem;
     width: fit-content;
-    background-color: #1875E8;
-    color: #fff;
+    background-color: rgba(169, 169, 169, 0.253);
+    color: white;
     font-size: 1.2rem;
     border: none;
     cursor: pointer;
@@ -41,8 +41,8 @@ button {
 }
 
 button:hover {
-    background-color: rgba(169, 169, 169, 0.224);
-    color: white;
+    background-color: #fff;
+    color: rgba(169, 169, 169, 0.55);
 }
 
 ul {
@@ -60,7 +60,7 @@ ul {
 
 ul li {
     padding: 1rem;
-    background-color: #041832;
+    background-color: #04183286;
     border-left: 0.3rem solid #1875E8;
     border-radius: 1rem;
     display: flex;
@@ -153,7 +153,20 @@ ul li:last-child {
     border-radius: 2rem;
 }
 
-@media (max-width: 550px) {
+.monto {
+    color: red !important;
+}
+
+.montoVerde {
+    color: darkgreen !important;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 750px) {
     body {
         margin: 1rem;
         margin-top: 0;
@@ -169,5 +182,10 @@ ul li:last-child {
     #botonFormulario,
     #botonModificar {
         width: 95%;
+    }
+    
+    .total {
+        margin-top: 0rem;
+        font-size: 1.2rem;
     }
 }
